@@ -1,0 +1,68 @@
+/* Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+:root {
+    --very-light-red: hsl(355, 100%, 74%);
+    --white: hsl(0, 0%, 100%);
+}
+/* Fin estilos base */
+/* Cabecera */
+.main-header {
+    padding: 3rem 1rem;
+    position: fixed;
+    top: 0;
+}
+.main-nav {
+    display: none;
+}
+/* Fin cabecera */
+/* Portada */
+.cover-section {
+    background-color: var(--very-light-red);
+    background-image: url(/images/bg-pattern-intro.svg);
+    background-size: 1000px;
+    background-position: center center;
+    border-radius: 0 0 0 100px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 10%;
+    text-align: center;
+}
+.cover-section .buttons {
+    margin-top: 2rem;
+}
+.button {
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5%;
+    margin: 0 10px;
+}
+.white-button {
+    background-color: var(--white);
+    color: var(--very-light-red);
+}
+.transparent-button {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
