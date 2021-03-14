@@ -231,6 +231,9 @@ a {
 
 /* Estilos para escritorio */
 @media(min-width: 1280px){
+    body {
+        overflow-x: hidden;
+    }
     .mobile {
         display: none;
     }
@@ -242,6 +245,9 @@ a {
         justify-content: flex-start;
         margin: 0 auto;
         width: 80%;
+    }
+    .not-in-cover {
+        height: 110px;
     }
     .main-nav-desktop {
         margin-left: 5rem;
@@ -290,6 +296,65 @@ a {
     .cover-section h1 {
         font-size: 38px;
     }
-    
+    .section-content {
+        display: flex;
+        text-align: left;
+        position: relative;
+    }
+    .section-content img {
+        position: absolute;
+        width: 70%;
+        right: -20%;
+        top: -40%;
+    }
+    .section-content .content {
+        width: 50%;
+    }
+    .overflow-img-section {
+        align-items: flex-end;
+        min-height: auto;
+        height: 50vh;
+        background-position: left center;
+        background-size: 60%;
+        margin-bottom: 15rem;
+    }
+    .overflow-img-section .overflow-img {
+        width: 50%;
+        height: 70vh;
+        top: -100px;
+        left: 40px;
+    }
+    .overflow-img-section h2, .overflow-img-section p {
+        width: 50%;
+        margin-top: 0;
+        text-align: left;
+    }
+    .reverse {
+        flex-direction: row-reverse;
+        margin-bottom: 15rem;
+    }
+    .reverse img {
+        right: auto;
+        left: -30%;
+        top: -50%;
+        width: 85%;
+    }
+    .main-footer {
+        display: flex;
+        text-align: left;
+        padding: 5rem 5%;
+    }
+    .footer-logo {
+        height: 50px;
+        width: 10%;
+    }
+    .footer-nav {
+        width: 80%;
+    }
+    .footer-nav > ul {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 15%;
+    }
 }
 /* Fin estilos para escritorio */
