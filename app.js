@@ -1,9 +1,10 @@
-// Menú desplegable para móviles 
 let hamburguer = document.getElementById ('hamburguer'),
-menu = document.getElementById('main-nav');
-
+    menu = document.getElementById('main-nav'),
+    elementosMenu = document.querySelectorAll('.main-nav .menu-item'),
+    cover = document.getElementById('cover'),
+    header = document.getElementById('main-header');
+// Menú desplegable para móviles 
 hamburguer.addEventListener('click', desplegarMenu);
-
 function desplegarMenu(){
     menu.classList.toggle('hidden-nav');
     
@@ -13,20 +14,14 @@ function desplegarMenu(){
         hamburguer.src = '../images/icon-hamburger.svg';
     }
 }
-
 // Desplegables internos del menú
-let elementosMenu = document.querySelectorAll('.main-nav .menu-item');
-
 for (const elemento of elementosMenu) {
     elemento.addEventListener('click', (e) => {
         elemento.children[1].classList.toggle('hidden-nav');
         elemento.children[0].classList.toggle('active-arrow');
     });
 }
-
 // Cambiar color del header despues del cover
-let cover = document.getElementById('cover');
-let header = document.getElementById('main-header');
 window.addEventListener('scroll', () => {
     let height = cover.offsetHeight;
     let scrollWindow = window.scrollY;
@@ -36,7 +31,6 @@ window.addEventListener('scroll', () => {
         header.classList.remove('not-in-cover');
     }
 })
-
 // Desplegables del menu para desktop
 let elementosMenuDesktop = document.querySelectorAll('#menu-desktop .menu-item');
 for (const elemento of elementosMenuDesktop) {
