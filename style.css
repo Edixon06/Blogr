@@ -15,6 +15,7 @@
     src: url(./fonts/Overpass-SemiBold.ttf);
 }
 :root {
+    --red: hsl(356, 100%, 66%);
     --very-light-red: hsl(355, 100%, 74%);
     --white: hsl(0, 0%, 100%);
     --blue: hsl(237, 17%, 21%);
@@ -45,6 +46,9 @@ a {
 }
 /* Fin estilos base */
 /* Cabecera */
+.main-nav-desktop {
+    display: none;
+}
 .main-header {
     padding: 3rem 1rem;
     position: fixed;
@@ -81,7 +85,7 @@ a {
 .main-nav .menu-item {
     margin: 2rem 0;
 }
-.main-nav .menu-item .active-arrow {
+.menu-item .active-arrow {
     transform: rotate(180deg);
 }
 .main-nav .sub-items-container {
@@ -210,3 +214,82 @@ a {
     margin: 2rem 0;
 }
 /* Fin footer */
+
+/* Estilos para tablet */
+@media (min-width: 768px){
+    .button {
+        padding: 2%;
+    }
+    .overflow-img-section {
+        min-height: 90vh;
+    }
+    .overflow-img {
+        height: 500px;
+    }    
+}
+/* Fin estilos para tablet */
+
+/* Estilos para escritorio */
+@media(min-width: 1280px){
+    .mobile {
+        display: none;
+    }
+    .main-nav-desktop {
+        display: block;
+    }
+    .main-header .top-bar {
+        color: var(--white);
+        justify-content: flex-start;
+        margin: 0 auto;
+        width: 80%;
+    }
+    .main-nav-desktop {
+        margin-left: 5rem;
+        width: 100%;
+    }
+    .main-nav-desktop > ul {
+        display: flex;
+        align-items: center;
+    }
+    .main-nav-desktop > ul > .menu-item {
+        margin: 0 1rem;
+        cursor: pointer;
+    }
+    .main-nav-desktop .menu-item .active {
+        display: block;
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+        padding: 2%;
+        position: absolute;
+        box-shadow: 0px 0px 10px #333;
+        margin-top: 1rem;
+    }
+    .main-nav-desktop .menu-item .active .submenu-item {
+        margin: 5px 0;
+    }
+    .user-nav-section {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: auto;
+        width: 25%;
+    }
+    .user-nav-section li:nth-child(2) {
+        text-align: center;
+        width: 70%;
+    }
+    .user-nav-section li:nth-child(2) button {
+        color: var(--red);
+        padding: 10% 15%;
+    }
+    .cover-section {
+        background-size: 150%;
+        min-height: 60vh;
+    }
+    .cover-section h1 {
+        font-size: 38px;
+    }
+    
+}
+/* Fin estilos para escritorio */

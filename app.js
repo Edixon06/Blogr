@@ -36,3 +36,12 @@ window.addEventListener('scroll', () => {
         header.classList.remove('not-in-cover');
     }
 })
+
+// Desplegables del menu para desktop
+let elementosMenuDesktop = document.querySelectorAll('#menu-desktop .menu-item');
+for (const elemento of elementosMenuDesktop) {
+    elemento.addEventListener('click', () => {
+        elemento.children[1].classList.toggle('active');
+        elemento.children[0].classList.toggle('active-arrow');
+    })
+}
