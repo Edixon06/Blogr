@@ -1,4 +1,26 @@
 /* Estilos Base */
+@font-face {
+    font-family: Overpass;
+    font-weight: normal;
+    src: url(./fonts/Overpass-Regular.ttf);
+}
+@font-face {
+    font-family: Overpass;
+    font-weight: bold;
+    src: url(./fonts/Overpass-Bold.ttf)
+}
+@font-face {
+    font-family: Overpass;
+    font-weight: 600;
+    src: url(./fonts/Overpass-SemiBold.ttf);
+}
+:root {
+    --very-light-red: hsl(355, 100%, 74%);
+    --white: hsl(0, 0%, 100%);
+    --blue: hsl(237, 17%, 21%);
+    --desaturated-blue: hsl(237, 23%, 32%);
+    --fuentePrincipal: Overpass;
+}
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +28,7 @@
 }
 body {
     font-size: 16px;
+    font-family: var(--fuentePrincipal);
 }
 ul {
     list-style: none;
@@ -15,10 +38,10 @@ a {
     font-size: inherit;
     text-decoration: none;
 }
-
-:root {
-    --very-light-red: hsl(355, 100%, 74%);
-    --white: hsl(0, 0%, 100%);
+.img {
+    display: block;
+    margin: 2rem auto;
+    width: 100%;
 }
 /* Fin estilos base */
 /* Cabecera */
@@ -66,3 +89,70 @@ a {
     border: 1px solid var(--white);
     color: var(--white);
 }
+
+/* Sección de contenido principal */
+.main-content {
+    margin: 5rem auto 5rem auto;
+    text-align: center;
+}
+.main-content h2 {
+    color: var(--blue);
+    margin-bottom: 2rem;
+}
+.main-content p {
+    margin-bottom: 2rem;
+}
+.container {
+    width: 85%;
+    margin: 0 auto 0 auto;
+}
+.overflow-img-section {
+    background-image: url(./images/bg-pattern-circles.svg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: center -200px;
+    background-color: var(--blue);
+    color: var(--white);
+    margin-top: 20rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 100px 0 100px;
+    padding: 0 10%;
+    position: relative;
+}
+.overflow-img-section h2 {
+    color: var(--white);
+    font-size: 32px;
+    margin-top: 50%;
+}
+.overflow-img-section .overflow-img {
+    position: absolute;
+    top: -200px;
+    left: 0;
+}
+/* Fin sección de contenido principal */
+
+/* Footer */
+.main-footer {
+    background-color: var(--blue);
+    border-radius: 0 100px 0 0;
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 0;
+}
+.footer-logo {
+    margin-bottom: 5rem;
+}
+.footer-nav .menu-item {
+    font-weight: bold;
+}
+.footer-nav .submenu-item {
+    font-weight: normal;
+    margin: 5px 0;
+}
+.footer-nav .sub-items-container {
+    margin: 2rem 0;
+}
+/* Fin footer */
