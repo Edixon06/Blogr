@@ -49,8 +49,54 @@ a {
     padding: 3rem 1rem;
     position: fixed;
     top: 0;
+    width: 100%;
+}
+.main-header .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.hamburguer {
+    height: 20px;
+    width: 35px;
 }
 .main-nav {
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px var(--desaturated-blue);
+    color: var(--desaturated-blue);
+    padding: 3rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.main-nav .menu-item {
+    margin: 2rem 0;
+}
+.main-nav .menu-item .active-arrow {
+    transform: rotate(180deg);
+}
+.main-nav .sub-items-container {
+    background-color: hsl(240, 2%, 79%);
+    border-radius: 5px;
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem 0;
+}
+.main-nav .sub-items-container .submenu-item {
+    margin: 1rem 0;
+}
+.main-nav hr {
+    margin: 1rem 0;
+}
+.main-nav .gradient-bg-button {
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    color: var(--white);
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 1rem;
+}
+.hidden-nav {
     display: none;
 }
 /* Fin cabecera */

@@ -14,13 +14,16 @@
 
 <body>
   <header class="main-header">
-    <div class="logo">
-      <img src="./images/logo.svg" alt="logo">
+    <div class="top-bar">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="logo">
+      </div>
+      <img src="images/icon-hamburger.svg" class="hamburguer" id="hamburguer">
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav hidden-nav" id="main-nav">
       <ul>
-        <li class="menu-item">Product
-          <ul>
+        <li class="menu-item">Product <img src="images/icon-arrow-dark.svg">
+          <ul class="sub-items-container hidden-nav">
             <li class="submenu-item">Overview</li>
             <li class="submenu-item">Pricing</li>
             <li class="submenu-item">Marketplace</li>
@@ -28,23 +31,24 @@
             <li class="submenu-item">Integrations</li>
           </ul>
         </li>
-        <li class="menu-item">Company
-          <ul>
+        <li class="menu-item">Company <img src="images/icon-arrow-dark.svg">
+          <ul class="sub-items-container hidden-nav">
             <li class="submenu-item">About</li>
             <li class="submenu-item">Team</li>
             <li class="submenu-item">Blog</li>
             <li class="submenu-item">Careers</li>
           </ul>
         </li>
-        <li class="menu-item">Connect
-          <ul>
+        <li class="menu-item">Connect <img src="images/icon-arrow-dark.svg">
+          <ul class="sub-items-container hidden-nav">
             <li class="submenu-item">Contact</li>
             <li class="submenu-item">Newsletter</li>
             <li class="submenu-item">LinkedIn</li>
           </ul>
         </li>
+        <hr>
         <li class="menu-item">Login</li>
-        <li class="menu-item">Sign Up</li>
+        <li class="menu-item"><button class="button gradient-bg-button">Sign Up</button></li>
       </ul>
     </nav>
   </header>
@@ -122,6 +126,8 @@
       </ul>
     </nav>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 
 </html>
