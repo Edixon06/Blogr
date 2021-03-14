@@ -23,3 +23,16 @@ for (const elemento of elementosMenu) {
         elemento.children[0].classList.toggle('active-arrow');
     });
 }
+
+// Cambiar color del header despues del cover
+let cover = document.getElementById('cover');
+let header = document.getElementById('main-header');
+window.addEventListener('scroll', () => {
+    let height = cover.offsetHeight;
+    let scrollWindow = window.scrollY;
+    if (scrollWindow > height) {
+        header.classList.add('not-in-cover');
+    } else {
+        header.classList.remove('not-in-cover');
+    }
+})
